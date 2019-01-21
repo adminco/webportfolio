@@ -1,0 +1,135 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: set-text-color($primary-color);
+    @include easeOut;
+  }
+
+  //Rotate into X with Menu Lines
+  &.close {
+    transform: rotate(180deg);
+
+    // this is to change the hamburger to an X shape
+    .btn-line {
+      // Line 1 -Rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      // Line 2 - Hide
+      &:nth-child(2) {
+        display: none;
+      }
+      // Line 3 - Rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(1px, -1px);
+      }
+    }
+  }
+}
+
+// Menu Overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: $background-opacity;
+  visibility: hidden;
+
+  // this is the class added by the eventListener
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav 
+  //same as .menu-branding and .menu-nav
+ {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    list-style: none;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: darken($primary-color, 5);
+    // translate3d(x-axis, y-axis , z-axis)
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    .nav-item {
+      transform: translate3d(200%, 0, 0);
+    }
+  }
+
+  &-branding {
+    margin: 0;
+    padding: 0;
+    background: $primary-color;
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    .portrait {
+      background-image: url("/assets/images/my-pic.JPG");
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      width: 250px;
+      transform: rotate(90deg);
+      border: solid 3px $secondary-color;
+      border-radius: 50%;
+    }
+  }
+  // when the show class is added by the eventListener
+  &.show {
+    .menu-nav {
+      // Slide in from top
+      transform: translate3d(0, 0, 0);
+      .nav-item {
+        transform: translate3d(0, 0, 0);
+        @include easeOutNav;
+
+        // highlight the current page
+        &.current > a {
+          color: $secondary-color;
+        }
+      }
+    }
+    .menu-branding {
+      // Slide in from bottom
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // styling the nav links
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: set-text-color($primary-color);
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}

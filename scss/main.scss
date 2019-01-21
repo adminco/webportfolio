@@ -1,0 +1,208 @@
+//import partial
+@import "config";
+@import "menu";
+
+// Global Reset
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+// Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font: {
+      size: 6rem;
+    }
+  }
+
+  &.sm-heading {
+    margin: {
+      bottom: 2rem;
+    }
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+// Main
+main {
+  padding: 4rem;
+  // this is to make a footer sticky at the bottom(60px is the height of the footer)
+  min-height: calc(100vh - 60px);
+  .icons {
+    margin-top: 1rem;
+    a {
+      padding: 0.4rem;
+      color: set-text-color($primary-color);
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+
+// About Page
+main#about {
+  .about-info {
+    display: grid;
+    grid-template-areas:
+      "bio-image bio bio"
+      "job1 job2 job3";
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    .bio-image {
+      background-image: url("/assets/images/my-pic.JPG");
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      width: 250px;
+      transform: rotate(90deg);
+      border: solid 3px $secondary-color;
+      border-radius: 50%;
+      margin: auto;
+      grid-area: bio-image;
+    }
+
+    .bio {
+      grid-area: bio;
+      font-size: 1.5rem;
+    }
+
+    .job-1 {
+      grid-area: job1;
+    }
+
+    .job-2 {
+      grid-area: job2;
+    }
+
+    .job-3 {
+      grid-area: job3;
+    }
+
+    .job {
+      background: lighten($primary-color, 5);
+      padding: 0.5rem;
+      border-bottom: $secondary-color 5px solid;
+    }
+  }
+}
+
+// Work Page
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+  img {
+    width: 100%;
+    border: 3px solid #fff;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+// Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 3px solid #fff;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+// Work Page -Button Styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($color: $primary-color, $amount: 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($color: $primary-color, $amount: 50);
+  color: #444;
+}
+
+// Footer
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+}
+
+// This is here because I want the media queries to run after the main css
+@import "mobile";
