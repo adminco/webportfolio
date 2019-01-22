@@ -1,0 +1,22 @@
+{
+  "name": "webportfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Site",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o pages/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adminco/webportfolio.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adminco/webportfolio/issues"
+  },
+  "homepage": "https://github.com/adminco/webportfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
