@@ -5,8 +5,48 @@ const menuBranding = document.querySelector(".menu-branding");
 const menuNav = document.querySelector(".menu-nav");
 const navItems = document.querySelectorAll(".nav-item");
 
+// JQuery to animate work description
+$(document).ready(() =>{
+  const $itemDescription = $('.item-description');
+  const $itemDescriptionB = $('.item-description_b');
+  const $itemDescriptionC = $('.item-description_c');
+  const $itemDescriptionD = $('.item-description_d');
+  const $itemDescriptionE = $('.item-description_e');
+  const $btn1 = $('.btn1');
+  const $btn2 = $('.btn2');
+  const $btn3 = $('.btn3');
+  const $btn4 = $('.btn4');
+  const $btn5 = $('.btn5');
+  
+
+  $btn1.on('click', (event) => {
+    event.currentTarget;
+    $itemDescription.toggle(500);
+  })
+  $btn2.on('click', (event) => {
+    event.currentTarget;
+    $itemDescriptionB.toggle(500);
+  })
+  $btn3.on('click', (event) => {
+    event.currentTarget;
+    $itemDescriptionC.toggle(500);
+  })
+  $btn4.on('click', (event) => {
+    event.currentTarget;
+    $itemDescriptionD.toggle(500);
+  })
+  $btn5.on('click', (event) => {
+    event.currentTarget;
+    $itemDescriptionE.toggle(500);
+  })
+}
+
+)
+
+
 // Set initial state of menu
 let showMenu = false;
+let showDescriptionEvent = false;
 
 function toggleMenu() {
   if (!showMenu) {
@@ -18,7 +58,7 @@ function toggleMenu() {
 
     showMenu = true;
   } else {
-    menuBtn.classList.remove("close"); // this adds a class value
+    menuBtn.classList.remove("close"); // this removes a class value
     menu.classList.remove("show");
     menuBranding.classList.remove("show");
     menuNav.classList.remove("show");
@@ -28,3 +68,4 @@ function toggleMenu() {
 }
 
 menuBtn.addEventListener("click", toggleMenu);
+

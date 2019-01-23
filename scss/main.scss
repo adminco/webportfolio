@@ -143,6 +143,32 @@ main#about {
       @include easeOut;
     }
   }
+  .item-description {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+    margin-bottom: 0.5rem;
+    display: none;
+  }
+  .item-description_b {
+    display: none;
+  }
+  .item-description_c {
+    display: none;
+  }
+  .item-description_d {
+    display: none;
+  }
+  .item-description_e {
+    display: none;
+  }
+  .btn{
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+  }
 }
 
 // Contact Page

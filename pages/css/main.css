@@ -193,6 +193,26 @@ main#about .about-info {
       opacity: 0.5;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
+  .projects .item-description {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px solid;
+    margin-bottom: 0.5rem;
+    display: none; }
+  .projects .item-description_b {
+    display: none; }
+  .projects .item-description_c {
+    display: none; }
+  .projects .item-description_d {
+    display: none; }
+  .projects .item-description_e {
+    display: none; }
+  .projects .btn, .projects .btn-dark, .projects .btn-light {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer; }
 
 .boxes {
   display: flex;
