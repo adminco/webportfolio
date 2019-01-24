@@ -1,9 +1,12 @@
+// import Typed from 'typed.js'
+
 // Select DOM elements
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
 const menuBranding = document.querySelector(".menu-branding");
 const menuNav = document.querySelector(".menu-nav");
 const navItems = document.querySelectorAll(".nav-item");
+const smHeading = document.querySelector(".sm-heading");
 
 // JQuery to animate work description
 $(document).ready(() => {
@@ -17,7 +20,9 @@ $(document).ready(() => {
   const $btn3 = $(".btn3");
   const $btn4 = $(".btn4");
   const $btn5 = $(".btn5");
-
+  
+  
+  // Event Handlers
   $btn1.on("click", event => {
     event.currentTarget;
     $itemDescription.toggle(500);
@@ -64,3 +69,28 @@ function toggleMenu() {
 }
 
 menuBtn.addEventListener("click", toggleMenu);
+
+// Type JS Animation
+var options = {
+  strings: [
+    "",
+    'Full Stack^1000 Developer',
+    'Systems Engineer',
+    'IT^1000 Support Analyst',
+    'DevOps^1000 Engineer'
+  ],
+  typeSpeed: 250,
+  startDelay: 0,
+  smartBackspace: true,
+  backDelay: 1000,
+  loop: true,
+  loopCount: Infinity,
+  showCursor: false,
+  // shuffle: true,
+}
+
+var typed = new Typed(smHeading, options);
+
+
+
+

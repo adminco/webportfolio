@@ -117,7 +117,9 @@ body#particles-body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #3c4148;
+    background-image: url("../../assets/images/home_particles.jpg");
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     box-sizing: border-box; }
 
@@ -133,14 +135,14 @@ h3 {
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
+    display: block;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
   h1.lg-heading-particle,
   h2.lg-heading-particle,
   h3.lg-heading-particle {
-    font-size: 7rem;
-    background: rgba(73, 73, 73, 0.5); }
+    font-size: 7rem; }
 
 a {
   color: #fff;
@@ -157,7 +159,6 @@ header {
 #opacity_main {
   margin-top: 25vh;
   position: absolute;
-  z-index: 99;
   padding: 4rem;
   overflow: hidden; }
   #opacity_main .icons {

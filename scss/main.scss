@@ -27,7 +27,9 @@ body#particles-body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #3c4148;
+    background-image: url("../../assets/images/home_particles.jpg");
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     box-sizing: border-box;
   }
@@ -47,6 +49,7 @@ h3 {
   }
 
   &.sm-heading {
+    display: block;
     margin: {
       bottom: 2rem;
     }
@@ -56,7 +59,6 @@ h3 {
 
   &.lg-heading-particle {
     font-size: 7rem;
-    background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
   }
 }
 
@@ -79,7 +81,6 @@ header {
   margin-top: 25vh;
   // border: 1px solid red;
   position: absolute;
-  z-index: 99;
   padding: 4rem;
   .icons {
     margin-top: 1rem;

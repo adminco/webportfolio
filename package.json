@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/adminco/webportfolio#readme",
   "dependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "typed.js": "^2.0.9"
   }
 }
