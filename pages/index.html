@@ -11,53 +11,64 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
 
     <title>Document</title>
   </head>
-  <body id="bg-img">
-    <!-- Header -->
-    <header>
-      <!-- Hamburger Menu -->
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
+  <body id="particles-body">
+    <div id="particles-js">
+      <!-- Header -->
+      <header>
+        <!-- Hamburger Menu -->
+        <div class="menu-btn">
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+        </div>
+        <!-- Navigation -->
+        <nav class="menu">
+          <div class="menu-branding"><div class="portrait"></div></div>
+          <ul class="menu-nav">
+            <li class="nav-item current">
+              <a href="index.html" class="nav-link"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link"> About Me </a>
+            </li>
+            <li class="nav-item">
+              <a href="work.html" class="nav-link"> My Work </a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link"> How To Reach Me </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Main -->
+      <div id="opacity_main">
+          <h1 class="lg-heading lg-heading-particle">
+              Chigozie <span class="text-secondary">Okoro</span>
+            </h1>
+            <h2 class="sm-heading">
+              Full-Stack Web Developer, Technical Support Analyst, Systems Engineer
+            </h2>
+            <div class="icons">
+              <a href="#!"> <i class="fab fa-twitter fa-2x"></i> </a>
+              <a href="#!"> <i class="fab fa-facebook fa-2x"></i> </a>
+              <a href="#!"> <i class="fab fa-linkedin fa-2x"></i> </a>
+              <a href="#!"> <i class="fab fa-github fa-2x"></i> </a>
+            </div>
       </div>
-      <!-- Navigation -->
-      <nav class="menu">
-        <div class="menu-branding"><div class="portrait"></div></div>
-        <ul class="menu-nav">
-          <li class="nav-item current">
-            <a href="index.html" class="nav-link"> Home </a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link"> About Me </a>
-          </li>
-          <li class="nav-item">
-            <a href="work.html" class="nav-link"> My Work </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link"> How To Reach Me </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <!-- Main -->
-    <main id="home">
-      <h1 class="lg-heading">
-        Chigozie <span class="text-secondary">Okoro</span>
-      </h1>
-      <h2 class="sm-heading">
-        Full-Stack Web Developer, Technical Support Analyst, Systems Engineer
-      </h2>
-      <div class="icons">
-        <a href="#!"> <i class="fab fa-twitter fa-2x"></i> </a>
-        <a href="#!"> <i class="fab fa-facebook fa-2x"></i> </a>
-        <a href="#!"> <i class="fab fa-linkedin fa-2x"></i> </a>
-        <a href="#!"> <i class="fab fa-github fa-2x"></i> </a>
-      </div>
-    </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load("particles-js", "../assets/particles.json", function() {
+        console.log("particles.json loaded");
+      });
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>

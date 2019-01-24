@@ -1,7 +1,7 @@
 {
-  "name": "webportfolio",
+  "name": "mywebportfolio",
   "version": "1.0.0",
-  "description": "Portfolio Site",
+  "description": "Web Portfolio",
   "main": "index.js",
   "scripts": {
     "sass": "node-sass -w scss/ -o pages/css/ --recursive"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/adminco/webportfolio.git"
   },
-  "author": "",
+  "author": "Gozy",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adminco/webportfolio/issues"

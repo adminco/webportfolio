@@ -17,6 +17,22 @@ body {
   line-height: 1.5;
 }
 
+body#particles-body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  // height: 100vh;
+  #particles-js {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #3c4148;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+}
+
 // Headings
 h1,
 h2,
@@ -37,6 +53,11 @@ h3 {
     padding: 0.2rem 1rem;
     background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
   }
+
+  &.lg-heading-particle {
+    font-size: 7rem;
+    background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
+  }
 }
 
 a {
@@ -52,6 +73,27 @@ header {
 
 .text-secondary {
   color: $secondary-color;
+}
+
+#opacity_main {
+  margin-top: 25vh;
+  // border: 1px solid red;
+  position: absolute;
+  z-index: 99;
+  padding: 4rem;
+  .icons {
+    margin-top: 1rem;
+    a {
+      padding: 0.4rem;
+      color: set-text-color($primary-color);
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+  overflow: hidden;
 }
 
 // Main
@@ -162,7 +204,7 @@ main#about {
   .item-description_e {
     display: none;
   }
-  .btn{
+  .btn {
     display: block;
     width: 100%;
     font-size: 1rem;
