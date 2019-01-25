@@ -35,19 +35,29 @@ body#particles-body {
   }
 }
 
+body#about {
+  background-image: linear-gradient(
+      to right,
+      rgba(72, 85, 99, 0.8),
+      rgba(41, 50, 60, 0.8)
+    ),
+    url("../../assets/images/about_2.jpg");
+  background-size: cover;
+  background-position: cover;
+  z-index: 2;
+}
+
 // Headings
 h1,
 h2,
 h3 {
   margin: 0;
   font-weight: 400;
-
   &.lg-heading {
     font: {
       size: 6rem;
     }
   }
-
   &.sm-heading {
     display: block;
     margin: {
@@ -56,27 +66,22 @@ h3 {
     padding: 0.2rem 1rem;
     background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
   }
-
   &.lg-heading-particle {
     font-size: 7rem;
   }
 }
-
 a {
   color: #fff;
   text-decoration: none;
 }
-
 header {
   position: fixed;
   z-index: 2;
   width: 100%;
 }
-
 .text-secondary {
   color: $secondary-color;
 }
-
 #opacity_main {
   margin-top: 25vh;
   // border: 1px solid red;
@@ -87,7 +92,6 @@ header {
     a {
       padding: 0.4rem;
       color: set-text-color($primary-color);
-
       &:hover {
         color: $secondary-color;
         @include easeOut();
@@ -96,7 +100,6 @@ header {
   }
   overflow: hidden;
 }
-
 // Main
 main {
   padding: 4rem;
@@ -107,14 +110,12 @@ main {
     a {
       padding: 0.4rem;
       color: set-text-color($primary-color);
-
       &:hover {
         color: $secondary-color;
         @include easeOut();
       }
     }
   }
-
   &#home {
     overflow: hidden;
     h1 {
@@ -122,17 +123,18 @@ main {
     }
   }
 }
-
 // About Page
 main#about {
   .about-info {
     display: grid;
     grid-template-areas:
       "bio-image bio bio"
-      "job1 job2 job3";
+      "project project project"
+      "job1 job2 job3"
+      "work-experience work-experience work-experience"
+      "job4 job5 job6";
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
-
     .bio-image {
       background-image: url("../../assets/images/my-pic.JPG");
       background-size: cover;
@@ -145,24 +147,37 @@ main#about {
       margin: auto;
       grid-area: bio-image;
     }
-
     .bio {
       grid-area: bio;
       font-size: 1.5rem;
     }
 
+    .project {
+      grid-area: project;
+    }
+
+    .work-experience {
+      grid-area: work-experience;
+    }
+
     .job-1 {
       grid-area: job1;
     }
-
     .job-2 {
       grid-area: job2;
     }
-
     .job-3 {
       grid-area: job3;
     }
-
+    .job-4 {
+      grid-area: job4;
+    }
+    .job-5 {
+      grid-area: job5;
+    }
+    .job-6 {
+      grid-area: job6;
+    }
     .job {
       background: lighten($primary-color, 5);
       padding: 0.5rem;
@@ -170,7 +185,6 @@ main#about {
     }
   }
 }
-
 // Work Page
 .projects {
   display: grid;
@@ -179,7 +193,6 @@ main#about {
   img {
     width: 100%;
     border: 3px solid #fff;
-
     &:hover {
       opacity: 0.5;
       border-color: $secondary-color;
@@ -213,7 +226,6 @@ main#about {
     cursor: pointer;
   }
 }
-
 // Contact Page
 .boxes {
   display: flex;
@@ -221,14 +233,12 @@ main#about {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
-
   div {
     font-size: 2rem;
     border: 3px solid #fff;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     @include easeOut;
-
     &:hover {
       padding: 0.5rem 1.5rem;
       background: $secondary-color;
@@ -239,7 +249,6 @@ main#about {
     }
   }
 }
-
 // Work Page -Button Styles
 .btn {
   display: block;
@@ -251,19 +260,16 @@ main#about {
     color: set-text-color($secondary-color);
   }
 }
-
 .btn-dark {
   @extend .btn;
   background: darken($color: $primary-color, $amount: 50);
   color: #fff;
 }
-
 .btn-light {
   @extend .btn;
   background: lighten($color: $primary-color, $amount: 50);
   color: #444;
 }
-
 // Footer
 #main-footer {
   text-align: center;
@@ -272,6 +278,5 @@ main#about {
   color: set-text-color($primary-color);
   height: 60px;
 }
-
 // This is here because I want the media queries to run after the main css
 @import "mobile";
