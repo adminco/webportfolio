@@ -162,6 +162,45 @@ main#about {
 
     .job-1 {
       grid-area: job1;
+      cursor: pointer;
+      &-img {
+        display: block;
+        height: 17rem;
+        width: 100%;
+      }
+      &-description {
+        position: absolute;
+        z-index: 10;
+        height: 35rem;
+        width: 25rem;
+        left: 36.2rem;
+        top: 37rem;
+        background: #fefcfb;
+        color: black;
+        display: none;
+        -webkit-clip-path: polygon(
+          4% 50%,
+          4% 0,
+          100% 0,
+          100% 100%,
+          4% 100%,
+          4% 55%,
+          0 53%
+        );
+        clip-path: polygon(
+          4% 50%,
+          4% 0,
+          100% 0,
+          100% 100%,
+          4% 100%,
+          4% 55%,
+          0 53%
+        );
+        padding: 2rem;
+      }
+      &-description-hide {
+        display: none;
+      }
     }
     .job-2 {
       grid-area: job2;
@@ -179,9 +218,25 @@ main#about {
       grid-area: job6;
     }
     .job {
-      background: lighten($primary-color, 5);
-      padding: 0.5rem;
       border-bottom: $secondary-color 5px solid;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      max-width: 90%;
+      &:hover {
+        box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.2);
+      }
+      &-content {
+        background: #fefcfb;
+        color: #444;
+        padding: 0.5rem;
+        opacity: 1;
+        height: 100%;
+      }
+      h3 {
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 500;
+      }
     }
   }
 }

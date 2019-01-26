@@ -216,7 +216,27 @@ main#about .about-info {
   main#about .about-info .work-experience {
     grid-area: work-experience; }
   main#about .about-info .job-1 {
-    grid-area: job1; }
+    grid-area: job1;
+    cursor: pointer; }
+    main#about .about-info .job-1-img {
+      display: block;
+      height: 17rem;
+      width: 100%; }
+    main#about .about-info .job-1-description {
+      position: absolute;
+      z-index: 10;
+      height: 35rem;
+      width: 25rem;
+      left: 36.2rem;
+      top: 37rem;
+      background: #fefcfb;
+      color: black;
+      display: none;
+      -webkit-clip-path: polygon(4% 50%, 4% 0, 100% 0, 100% 100%, 4% 100%, 4% 55%, 0 53%);
+      clip-path: polygon(4% 50%, 4% 0, 100% 0, 100% 100%, 4% 100%, 4% 55%, 0 53%);
+      padding: 2rem; }
+    main#about .about-info .job-1-description-hide {
+      display: none; }
   main#about .about-info .job-2 {
     grid-area: job2; }
   main#about .about-info .job-3 {
@@ -228,9 +248,22 @@ main#about .about-info {
   main#about .about-info .job-6 {
     grid-area: job6; }
   main#about .about-info .job {
-    background: #515151;
-    padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    border-bottom: #eece1a 5px solid;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    max-width: 90%; }
+    main#about .about-info .job:hover {
+      box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.2); }
+    main#about .about-info .job-content {
+      background: #fefcfb;
+      color: #444;
+      padding: 0.5rem;
+      opacity: 1;
+      height: 100%; }
+    main#about .about-info .job h3 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: 500; }
 
 .projects {
   display: grid;

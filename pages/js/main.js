@@ -5,8 +5,9 @@ const menuBranding = document.querySelector(".menu-branding");
 const menuNav = document.querySelector(".menu-nav");
 const navItems = document.querySelectorAll(".nav-item");
 const smHeading = document.querySelector(".sm-heading");
+const job1Description = document.querySelector(".job-1-description");
 
-// JQuery to animate work description
+// JQuery for animation
 $(document).ready(() => {
   const $itemDescription = $(".item-description");
   const $itemDescriptionB = $(".item-description_b");
@@ -18,8 +19,10 @@ $(document).ready(() => {
   const $btn3 = $(".btn3");
   const $btn4 = $(".btn4");
   const $btn5 = $(".btn5");
+  const $job1 = $(".job-1");
+  const $job1Description = $(".job-1-description");
 
-  // Event Handlers
+  // Event Handlers Work
   $btn1.on("click", event => {
     event.currentTarget;
     $itemDescription.toggle(500);
@@ -40,6 +43,17 @@ $(document).ready(() => {
     event.currentTarget;
     $itemDescriptionE.toggle(500);
   });
+
+  // Event Handlers About
+  $job1.hover(event => {
+    event.currentTarget;
+    $job1Description.show(300);
+  });
+
+  // Event Handler
+  // $job1Description.on("mouseleave", () => {
+  //   $job1Description.css("display", "none");
+  // });
 });
 
 // Set initial state of menu
@@ -64,6 +78,11 @@ function toggleMenu() {
 }
 // Event Handler to toggle menu navigation
 menuBtn.addEventListener("click", toggleMenu);
+
+// Event
+job1Description.addEventListener("mouseleave", event => {
+  event.target.style.display = "none";
+});
 
 // Type JS Animation
 var options = {
