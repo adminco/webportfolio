@@ -173,11 +173,11 @@ main#about {
         z-index: 10;
         height: 35rem;
         width: 25rem;
-        left: 36.2rem;
-        top: 37rem;
+        left: 30.5%;
+        top: 60%;
         background: #fefcfb;
         color: black;
-        display: none;
+        visibility: hidden;
         -webkit-clip-path: polygon(
           4% 50%,
           4% 0,
@@ -198,24 +198,212 @@ main#about {
         );
         padding: 2rem;
       }
-      &-description-hide {
-        display: none;
+      .inFocus {
+        visibility: visible;
+      }
+      .inFocusStill {
+        visibility: visible;
       }
     }
     .job-2 {
       grid-area: job2;
+      cursor: pointer;
+      &-description {
+        position: absolute;
+        z-index: 10;
+        height: 35rem;
+        width: 25rem;
+        left: 61.8%;
+        top: 60%;
+        background: #fefcfb;
+        color: black;
+        visibility: hidden;
+        -webkit-clip-path: polygon(
+          4% 50%,
+          4% 0,
+          100% 0,
+          100% 100%,
+          4% 100%,
+          4% 55%,
+          0 53%
+        );
+        clip-path: polygon(
+          4% 50%,
+          4% 0,
+          100% 0,
+          100% 100%,
+          4% 100%,
+          4% 55%,
+          0 53%
+        );
+        padding: 2rem;
+      }
+      .inFocus2 {
+        visibility: visible;
+      }
+      .inFocusStill2 {
+        visibility: visible;
+      }
     }
     .job-3 {
       grid-area: job3;
+      cursor: pointer;
+      &-description {
+        position: absolute;
+        z-index: 10;
+        height: 35rem;
+        width: 25rem;
+        left: 41.3%;
+        top: 60%;
+        background: #fefcfb;
+        color: black;
+        visibility: hidden;
+        -webkit-clip-path: polygon(
+          0 0,
+          95% 0,
+          95% 49%,
+          100% 51%,
+          95% 54%,
+          95% 100%,
+          0 100%
+        );
+        clip-path: polygon(
+          0 0,
+          95% 0,
+          95% 49%,
+          100% 51%,
+          95% 54%,
+          95% 100%,
+          0 100%
+        );
+        padding: 2rem;
+      }
+      .inFocus3 {
+        visibility: visible;
+      }
+      .inFocusStill3 {
+        visibility: visible;
+      }
     }
     .job-4 {
       grid-area: job4;
+      cursor: pointer;
+      &-description {
+        position: absolute;
+        z-index: 10;
+        height: 35rem;
+        width: 25rem;
+        left: 30.5%;
+        top: 111%;
+        background: #fefcfb;
+        color: black;
+        visibility: hidden;
+        -webkit-clip-path: polygon(
+          4% 50%,
+          4% 0,
+          100% 0,
+          100% 100%,
+          4% 100%,
+          4% 55%,
+          0 53%
+        );
+        clip-path: polygon(
+          4% 50%,
+          4% 0,
+          100% 0,
+          100% 100%,
+          4% 100%,
+          4% 55%,
+          0 53%
+        );
+        padding: 2rem;
+      }
+      .inFocus4 {
+        visibility: visible;
+      }
+      .inFocusStill4 {
+        visibility: visible;
+      }
     }
     .job-5 {
       grid-area: job5;
+      cursor: pointer;
+      &-description {
+        position: absolute;
+        z-index: 10;
+        height: 35rem;
+        width: 25rem;
+        left: 61.8%;
+        top: 111%;
+        background: #fefcfb;
+        color: black;
+        visibility: hidden;
+        -webkit-clip-path: polygon(
+          4% 50%,
+          4% 0,
+          100% 0,
+          100% 100%,
+          4% 100%,
+          4% 55%,
+          0 53%
+        );
+        clip-path: polygon(
+          4% 50%,
+          4% 0,
+          100% 0,
+          100% 100%,
+          4% 100%,
+          4% 55%,
+          0 53%
+        );
+        padding: 2rem;
+      }
+      .inFocus5 {
+        visibility: visible;
+      }
+      .inFocusStill5 {
+        visibility: visible;
+      }
     }
     .job-6 {
       grid-area: job6;
+      cursor: pointer;
+      &-description {
+        position: absolute;
+        z-index: 10;
+        height: 35rem;
+        width: 25rem;
+        left: 41.3%;
+        top: 111%;
+        background: #fefcfb;
+        color: black;
+        visibility: hidden;
+        -webkit-clip-path: polygon(
+          0 0,
+          95% 0,
+          95% 49%,
+          100% 51%,
+          95% 54%,
+          95% 100%,
+          0 100%
+        );
+        clip-path: polygon(
+          0 0,
+          95% 0,
+          95% 49%,
+          100% 51%,
+          95% 54%,
+          95% 100%,
+          0 100%
+        );
+        padding: 2rem;
+      }
+      .inFocus6 {
+        visibility: visible;
+      }
+      .inFocusStill6 {
+        visibility: visible;
+      }
     }
     .job {
       border-bottom: $secondary-color 5px solid;
@@ -230,7 +418,9 @@ main#about {
         color: #444;
         padding: 0.5rem;
         opacity: 1;
-        height: 100%;
+        min-height: 29%;
+        max-height: 100%;
+        margin: auto 0;
       }
       h3 {
         font-size: 2rem;

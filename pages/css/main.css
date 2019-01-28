@@ -227,26 +227,118 @@ main#about .about-info {
       z-index: 10;
       height: 35rem;
       width: 25rem;
-      left: 36.2rem;
-      top: 37rem;
+      left: 30.5%;
+      top: 60%;
       background: #fefcfb;
       color: black;
-      display: none;
+      visibility: hidden;
       -webkit-clip-path: polygon(4% 50%, 4% 0, 100% 0, 100% 100%, 4% 100%, 4% 55%, 0 53%);
       clip-path: polygon(4% 50%, 4% 0, 100% 0, 100% 100%, 4% 100%, 4% 55%, 0 53%);
       padding: 2rem; }
-    main#about .about-info .job-1-description-hide {
-      display: none; }
+    main#about .about-info .job-1 .inFocus {
+      visibility: visible; }
+    main#about .about-info .job-1 .inFocusStill {
+      visibility: visible; }
   main#about .about-info .job-2 {
-    grid-area: job2; }
+    grid-area: job2;
+    cursor: pointer; }
+    main#about .about-info .job-2-description {
+      position: absolute;
+      z-index: 10;
+      height: 35rem;
+      width: 25rem;
+      left: 61.8%;
+      top: 60%;
+      background: #fefcfb;
+      color: black;
+      visibility: hidden;
+      -webkit-clip-path: polygon(4% 50%, 4% 0, 100% 0, 100% 100%, 4% 100%, 4% 55%, 0 53%);
+      clip-path: polygon(4% 50%, 4% 0, 100% 0, 100% 100%, 4% 100%, 4% 55%, 0 53%);
+      padding: 2rem; }
+    main#about .about-info .job-2 .inFocus2 {
+      visibility: visible; }
+    main#about .about-info .job-2 .inFocusStill2 {
+      visibility: visible; }
   main#about .about-info .job-3 {
-    grid-area: job3; }
+    grid-area: job3;
+    cursor: pointer; }
+    main#about .about-info .job-3-description {
+      position: absolute;
+      z-index: 10;
+      height: 35rem;
+      width: 25rem;
+      left: 41.3%;
+      top: 60%;
+      background: #fefcfb;
+      color: black;
+      visibility: hidden;
+      -webkit-clip-path: polygon(0 0, 95% 0, 95% 49%, 100% 51%, 95% 54%, 95% 100%, 0 100%);
+      clip-path: polygon(0 0, 95% 0, 95% 49%, 100% 51%, 95% 54%, 95% 100%, 0 100%);
+      padding: 2rem; }
+    main#about .about-info .job-3 .inFocus3 {
+      visibility: visible; }
+    main#about .about-info .job-3 .inFocusStill3 {
+      visibility: visible; }
   main#about .about-info .job-4 {
-    grid-area: job4; }
+    grid-area: job4;
+    cursor: pointer; }
+    main#about .about-info .job-4-description {
+      position: absolute;
+      z-index: 10;
+      height: 35rem;
+      width: 25rem;
+      left: 30.5%;
+      top: 111%;
+      background: #fefcfb;
+      color: black;
+      visibility: hidden;
+      -webkit-clip-path: polygon(4% 50%, 4% 0, 100% 0, 100% 100%, 4% 100%, 4% 55%, 0 53%);
+      clip-path: polygon(4% 50%, 4% 0, 100% 0, 100% 100%, 4% 100%, 4% 55%, 0 53%);
+      padding: 2rem; }
+    main#about .about-info .job-4 .inFocus4 {
+      visibility: visible; }
+    main#about .about-info .job-4 .inFocusStill4 {
+      visibility: visible; }
   main#about .about-info .job-5 {
-    grid-area: job5; }
+    grid-area: job5;
+    cursor: pointer; }
+    main#about .about-info .job-5-description {
+      position: absolute;
+      z-index: 10;
+      height: 35rem;
+      width: 25rem;
+      left: 61.8%;
+      top: 111%;
+      background: #fefcfb;
+      color: black;
+      visibility: hidden;
+      -webkit-clip-path: polygon(4% 50%, 4% 0, 100% 0, 100% 100%, 4% 100%, 4% 55%, 0 53%);
+      clip-path: polygon(4% 50%, 4% 0, 100% 0, 100% 100%, 4% 100%, 4% 55%, 0 53%);
+      padding: 2rem; }
+    main#about .about-info .job-5 .inFocus5 {
+      visibility: visible; }
+    main#about .about-info .job-5 .inFocusStill5 {
+      visibility: visible; }
   main#about .about-info .job-6 {
-    grid-area: job6; }
+    grid-area: job6;
+    cursor: pointer; }
+    main#about .about-info .job-6-description {
+      position: absolute;
+      z-index: 10;
+      height: 35rem;
+      width: 25rem;
+      left: 41.3%;
+      top: 111%;
+      background: #fefcfb;
+      color: black;
+      visibility: hidden;
+      -webkit-clip-path: polygon(0 0, 95% 0, 95% 49%, 100% 51%, 95% 54%, 95% 100%, 0 100%);
+      clip-path: polygon(0 0, 95% 0, 95% 49%, 100% 51%, 95% 54%, 95% 100%, 0 100%);
+      padding: 2rem; }
+    main#about .about-info .job-6 .inFocus6 {
+      visibility: visible; }
+    main#about .about-info .job-6 .inFocusStill6 {
+      visibility: visible; }
   main#about .about-info .job {
     border-bottom: #eece1a 5px solid;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
@@ -259,7 +351,9 @@ main#about .about-info {
       color: #444;
       padding: 0.5rem;
       opacity: 1;
-      height: 100%; }
+      min-height: 29%;
+      max-height: 100%;
+      margin: auto 0; }
     main#about .about-info .job h3 {
       font-size: 2rem;
       text-align: center;
@@ -346,7 +440,15 @@ main#about .about-info {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  main#about .about-info {
+    grid-template-areas: "bio-image bio" "project project" "job1 job2" "job3 ." "work-experience work-experience" "job4 job5" "job6 .";
+    grid-template-columns: repeat(2, 1fr); }
+    main#about .about-info .job-1 {
+      grid-area: job1;
+      cursor: pointer; }
+      main#about .about-info .job-1-description {
+        left: 44.5%; } }
 
 @media screen and (max-width: 768px) {
   #opacity_main {
@@ -380,7 +482,7 @@ main#about .about-info {
       height: 150px;
       width: 150px; }
   main#about .about-info {
-    grid-template-areas: "bio-image" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bio-image" "bio" "project" "job1" "job2" "job3" "work-experience" "job4" "job5" "job6";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }

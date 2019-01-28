@@ -9,6 +9,26 @@
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+  main#about {
+    .about-info {
+      grid-template-areas:
+        "bio-image bio"
+        "project project"
+        "job1 job2"
+        "job3 ."
+        "work-experience work-experience"
+        "job4 job5"
+        "job6 .";
+      grid-template-columns: repeat(2, 1fr);
+      .job-1 {
+        grid-area: job1;
+        cursor: pointer;
+        &-description {
+          left: 44.5%;
+        }
+      }
+    }
+  }
 }
 
 // Tablets amd Small Laptops
@@ -65,9 +85,14 @@
       grid-template-areas:
         "bio-image"
         "bio"
+        "project"
         "job1"
         "job2"
-        "job3";
+        "job3"
+        "work-experience"
+        "job4"
+        "job5"
+        "job6";
       grid-template-columns: 1fr;
     }
   }
